@@ -1,0 +1,104 @@
+/* Global styles */
+body {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+/* Card styling */
+.card {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.buttons {
+    margin-top: 2rem;
+}
+
+button {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    margin: 0 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.yes {
+    background-color: #ff6b81;
+    color: #fff;
+}
+
+.yes:hover {
+    transform: scale(1.05);
+}
+
+.no {
+    background-color: #cccccc;
+    color: #333;
+}
+
+.no:hover {
+    transform: scale(0.95);
+}
+
+.heart-emoji {
+    color: #e25555;
+}
+
+/* Images within the cards */
+.meme-img {
+    width: 200px;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.celebrate-img {
+    width: 250px;
+    max-width: 100%;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+/* Subtext styling */
+.subtext {
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+/* Override the heart emoji color for celebration */
+.celebrate-emoji {
+    color: #f4b400;
+}
+
+/* Falling hearts */
+.heart {
+    position: fixed;
+    top: -10vh;
+    font-size: 24px;
+    color: #e25555;
+    animation: fall linear infinite;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
